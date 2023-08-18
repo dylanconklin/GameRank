@@ -7,13 +7,42 @@
 
 import SwiftUI
 
+struct MenuLabel: View {
+    var image: String
+    var text: String
+
+    var body: some View {
+        HStack {
+            Image(systemName: image)
+            Text(text)
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                NavigationLink {
+                    ScheduleView(week: 1)
+                } label: {
+                    MenuLabel(image: "football", text: "Scores")
+                }
+                NavigationLink {
+                } label: {
+                    MenuLabel(image: "trophy", text: "Standings")
+                }
+                NavigationLink {
+                    ScheduleView(week: 1)
+                } label: {
+                    MenuLabel(image: "calendar", text: "Schedule")
+                }
+                NavigationLink {
+                } label: {
+                    MenuLabel(image: "checkmark", text: "Make Picks")
+                }
+            }
+            .navigationTitle("GameRank")
         }
         .padding()
     }

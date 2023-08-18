@@ -14,6 +14,14 @@
 		AB0E3CD12A7EB3C80019E48E /* GameRankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CD02A7EB3C80019E48E /* GameRankTests.swift */; };
 		AB0E3CDB2A7EB3C80019E48E /* GameRankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CDA2A7EB3C80019E48E /* GameRankUITests.swift */; };
 		AB0E3CDD2A7EB3C80019E48E /* GameRankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CDC2A7EB3C80019E48E /* GameRankUITestsLaunchTests.swift */; };
+		AB0E3CEA2A7EC2210019E48E /* TeamLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CE92A7EC2210019E48E /* TeamLogo.swift */; };
+		AB0E3CEC2A7EC2C10019E48E /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CEB2A7EC2C10019E48E /* Teams.swift */; };
+		AB0E3CEE2A7EC61B0019E48E /* Matchup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E3CED2A7EC61B0019E48E /* Matchup.swift */; };
+		AB69CEF02A7F26EF00FC48C3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB69CEEF2A7F26EF00FC48C3 /* Database.swift */; };
+		AB69CEF32A7F2AFC00FC48C3 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB69CEF22A7F2AFC00FC48C3 /* PostgresClientKit */; };
+		AB69CEF52A7F604A00FC48C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB69CEF42A7F604A00FC48C3 /* GoogleService-Info.plist */; };
+		AB8E29082A81998600E914F7 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E29072A81998600E914F7 /* ScheduleView.swift */; };
+		AB8E290A2A83399A00E914F7 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E29092A83399A00E914F7 /* StandingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,13 @@
 		AB0E3CD62A7EB3C80019E48E /* GameRankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameRankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0E3CDA2A7EB3C80019E48E /* GameRankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRankUITests.swift; sourceTree = "<group>"; };
 		AB0E3CDC2A7EB3C80019E48E /* GameRankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB0E3CE92A7EC2210019E48E /* TeamLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLogo.swift; sourceTree = "<group>"; };
+		AB0E3CEB2A7EC2C10019E48E /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		AB0E3CED2A7EC61B0019E48E /* Matchup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchup.swift; sourceTree = "<group>"; };
+		AB69CEEF2A7F26EF00FC48C3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		AB69CEF42A7F604A00FC48C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB8E29072A81998600E914F7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		AB8E29092A83399A00E914F7 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB69CEF32A7F2AFC00FC48C3 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +111,15 @@
 		AB0E3CBD2A7EB3C70019E48E /* GameRank */ = {
 			isa = PBXGroup;
 			children = (
+				AB69CEF42A7F604A00FC48C3 /* GoogleService-Info.plist */,
 				AB0E3CBE2A7EB3C70019E48E /* GameRankApp.swift */,
 				AB0E3CC02A7EB3C70019E48E /* ContentView.swift */,
+				AB8E29072A81998600E914F7 /* ScheduleView.swift */,
+				AB0E3CED2A7EC61B0019E48E /* Matchup.swift */,
+				AB0E3CEB2A7EC2C10019E48E /* Teams.swift */,
+				AB8E29092A83399A00E914F7 /* StandingsView.swift */,
+				AB69CEEF2A7F26EF00FC48C3 /* Database.swift */,
+				AB0E3CE92A7EC2210019E48E /* TeamLogo.swift */,
 				AB0E3CC22A7EB3C80019E48E /* Assets.xcassets */,
 				AB0E3CC42A7EB3C80019E48E /* GameRank.entitlements */,
 				AB0E3CC52A7EB3C80019E48E /* Preview Content */,
@@ -145,6 +168,9 @@
 			dependencies = (
 			);
 			name = GameRank;
+			packageProductDependencies = (
+				AB69CEF22A7F2AFC00FC48C3 /* PostgresClientKit */,
+			);
 			productName = GameRank;
 			productReference = AB0E3CBB2A7EB3C70019E48E /* GameRank.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +243,10 @@
 				Base,
 			);
 			mainGroup = AB0E3CB22A7EB3C70019E48E;
+			packageReferences = (
+				AB69CEF12A7F2AFC00FC48C3 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
+				AB8B740F2A8FF19D00CC4CE9 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */,
+			);
 			productRefGroup = AB0E3CBC2A7EB3C70019E48E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +265,7 @@
 			files = (
 				AB0E3CC72A7EB3C80019E48E /* Preview Assets.xcassets in Resources */,
 				AB0E3CC32A7EB3C80019E48E /* Assets.xcassets in Resources */,
+				AB69CEF52A7F604A00FC48C3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB69CEF02A7F26EF00FC48C3 /* Database.swift in Sources */,
+				AB0E3CEC2A7EC2C10019E48E /* Teams.swift in Sources */,
 				AB0E3CC12A7EB3C70019E48E /* ContentView.swift in Sources */,
+				AB8E29082A81998600E914F7 /* ScheduleView.swift in Sources */,
+				AB8E290A2A83399A00E914F7 /* StandingsView.swift in Sources */,
+				AB0E3CEA2A7EC2210019E48E /* TeamLogo.swift in Sources */,
 				AB0E3CBF2A7EB3C70019E48E /* GameRankApp.swift in Sources */,
+				AB0E3CEE2A7EC61B0019E48E /* Matchup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +384,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,6 +438,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -612,6 +653,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB69CEF12A7F2AFC00FC48C3 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codewinsdotcom/PostgresClientKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		AB8B740F2A8FF19D00CC4CE9 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thii/FontAwesome.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB69CEF22A7F2AFC00FC48C3 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB69CEF12A7F2AFC00FC48C3 /* XCRemoteSwiftPackageReference "PostgresClientKit" */;
+			productName = PostgresClientKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB0E3CB32A7EB3C70019E48E /* Project object */;
 }
