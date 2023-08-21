@@ -10,7 +10,7 @@ import SwiftUI
 struct Game : Hashable {
     var week: Int
     var teams: [Team]
-    var score: [Int]?
+    var score: [Int?]?
     var date: Date?
 }
 

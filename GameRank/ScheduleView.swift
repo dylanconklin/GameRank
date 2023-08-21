@@ -55,14 +55,15 @@ struct ScheduleView: View {
     @State var week: Int
     var schedule: [Game] {
         var result: [Game] = []
-        let games = Database.query("SELECT week, away, home, date FROM gamerank.schedule WHERE week = \(week) ORDER BY date ASC;")
+        let games = Database.query("SELECT week, away, home, date, away_score, home_score FROM gamerank.schedule WHERE week = \(week) ORDER BY date ASC;")
         do {
             for game in games {
                 result.append(Game(week: try game[0].int(),
                                    teams: [
                                        teams[try game[1].string()] ?? Team(abbreviated_name: "???", name: "Unknown"),
                                        teams[try game[2].string()] ?? Team(abbreviated_name: "???", name: "Unknown"),
-                                   ]
+                                   ],
+                                   score: [try? game[4].int(), try? game[5].int()]
                     ))
             }
         } catch {
