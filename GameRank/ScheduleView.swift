@@ -75,12 +75,13 @@ struct ScheduleView: View {
     var body: some View {
         VStack {
             WeekNavigator(week: $week)
+                .padding()
+            Spacer()
             if schedule.isEmpty {
                 VStack {
                     Text("No games scheduled yet...")
                     Text("Check back again later.")
                 }
-                .padding()
             } else {
                 ScrollView {
                     ForEach(schedule.sorted(by: { $0.week < $1.week }), id: \.self) { game in
@@ -88,12 +89,11 @@ struct ScheduleView: View {
                     }
                 }
             }
+            Spacer()
         }
     }
 }
 
-struct ScheduleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScheduleView(week: 1)
-    }
+#Preview {
+    ScheduleView(week: 1)
 }
