@@ -21,30 +21,16 @@ struct MenuLabel: View {
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink {
-                    ScheduleView(week: 1)
-                } label: {
-                    MenuLabel(image: "football", text: "Scores")
-                }
-                NavigationLink {
-                } label: {
-                    MenuLabel(image: "trophy", text: "Standings")
-                }
-                NavigationLink {
-                    ScheduleView(week: 1)
-                } label: {
-                    MenuLabel(image: "calendar", text: "Schedule")
-                }
-                NavigationLink {
-                } label: {
-                    MenuLabel(image: "checkmark", text: "Make Picks")
-                }
-            }
-            .navigationTitle("GameRank")
+        TabView {
+            ScheduleView(week: 1)
+                .tabItem { Label("Scores", systemImage: "football") }
+            StandingsView()
+                .tabItem { Label("Standings", systemImage: "trophy") }
+            ScheduleView(week: 1)
+                .tabItem { Label("Schedule", systemImage: "calendar") }
+            ScheduleView(week: 1)
+                .tabItem { Label("Make Picks", systemImage: "checkmark") }
         }
-        .padding()
     }
 }
 
