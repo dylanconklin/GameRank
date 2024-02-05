@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Game : Hashable {
+struct Game: Hashable {
     var week: Int
     var teams: [Team]
     var score: [Int?]?
@@ -17,7 +17,7 @@ struct Game : Hashable {
 struct MatchupTeam: View {
     var team: Team
     var score: Int?
-    
+
     var body: some View {
         VStack {
             Button {
@@ -27,7 +27,7 @@ struct MatchupTeam: View {
             Text(team.abbreviated_name)
                 .fontDesign(.monospaced)
                 .fontWeight(Font.Weight.bold)
-                .font(.largeTitle)
+                .font(.title)
             Text("\(team.wl_record[0]) - \(team.wl_record[1])\(team.wl_record[2] == 0 ? "" : " - \(team.wl_record[2])")")
         }
     }
@@ -35,12 +35,10 @@ struct MatchupTeam: View {
 
 struct Matchup: View {
     var game: Game
-    
+
     @State private var awayScale: Double = 1.0
     @State private var homeScale: Double = 1.0
 
-    @State var hovered = false
-    
     var body: some View {
         HStack {
             Spacer()
@@ -49,7 +47,7 @@ struct Matchup: View {
             Text("at")
                 .fontDesign(.monospaced)
                 .fontWeight(Font.Weight.bold)
-                .font(.largeTitle)
+                .font(.title)
             Spacer()
             MatchupTeam(team: game.teams[1], score: game.score?[1])
             Spacer()
@@ -57,13 +55,16 @@ struct Matchup: View {
     }
 }
 
-struct Matchup_Previews: PreviewProvider {
-    static var game1: Game = Game(week: 1, teams: [teams["PIT"] ?? Team(abbreviated_name: "PIT", name: "Pittsburgh"), teams["BAL"] ?? Team(abbreviated_name: "BAL", name: "Baltimore")])
-    static var game2: Game = Game(week: 1, teams: [teams["PIT"] ?? Team(abbreviated_name: "PIT", name: "Pittsburgh"), teams["BAL"] ?? Team(abbreviated_name: "BAL", name: "Baltimore")], score: [3, 7])
-    static var previews: some View {
-        VStack {
-            Matchup(game: game1)
-            Matchup(game: game2)
-        }
+#Preview {
+    let game1: Game = Game(week: 1,
+                           teams: [teams["PIT"] ?? Team(abbreviated_name: "PIT", name: "Pittsburgh"),
+                                   teams["BAL"] ?? Team(abbreviated_name: "BAL", name: "Baltimore")])
+    let game2: Game = Game(week: 1,
+                           teams: [teams["PIT"] ?? Team(abbreviated_name: "PIT", name: "Pittsburgh"),
+                                   teams["BAL"] ?? Team(abbreviated_name: "BAL", name: "Baltimore")],
+                           score: [3, 7])
+    return VStack {
+        Matchup(game: game1)
+        Matchup(game: game2)
     }
 }
